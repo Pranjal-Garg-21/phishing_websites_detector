@@ -1,0 +1,11 @@
+# Virtual Environment
+env/
+
+# Datasets
+*.csv
+
+# Saved Machine Learning Models
+*.pkl
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
