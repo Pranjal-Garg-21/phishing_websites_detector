@@ -3,10 +3,10 @@
 ## Overview
 This project focuses on building a machine learning model to detect phishing URLs and protect users from malicious sites. Using Natural Language Processing (NLP) techniques, the model analyzes the lexical features of URLs to classify them as either legitimate or phishing.
 
-This repository serves as a portfolio project showcasing my ability to process raw string data, apply NLP techniques, train classification models, and evaluate their performance.
-
 ## Tech Stack & Libraries
 - **Language:** Python
+- **Backend framework:** `Flask`
+- **Frontend UI:** `HTML5`, `Tailwind CSS` (Dark Mode UI)
 - **Data Manipulation:** `pandas`, `numpy`
 - **Natural Language Processing:** `nltk` (RegexpTokenizer, SnowballStemmer)
 - **Machine Learning:** `scikit-learn` (Logistic Regression, Multinomial Naive Bayes)
@@ -29,12 +29,15 @@ The model gets trained on `phishing_site_urls.csv`, which contains a collection 
    - Evaluating results using `classification_report` and `confusion_matrix` to look at precision, recall, and overall accuracy.
 5. **Model Serialization:**
    - Saving the trained model using `pickle` for quick deployment and future inferences without retraining.
+6. **Web Application Deployment:**
+   - Built a sleek, intuitive, dark-themed UI using **Tailwind CSS**.
+   - Integrated the serialized ML model with a **Flask** backend to instantly evaluate inputted URLs and dynamically return safety alerts.
 
 ## How to Run Locally
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Pranjal-Garg-21/phishing_emails_detector.git
+   git clone https://github.com/Pranjal-Garg-21/phishing_websites_detector.git
    cd phishing_emails
    ```
 
@@ -44,14 +47,19 @@ The model gets trained on `phishing_site_urls.csv`, which contains a collection 
    # For Windows: .\env\Scripts\activate
    ```
 
-3. **Launch the Jupyter Notebook:**
+3. **Run the Web Application:**
+   ```bash
+   python app.py
+   ```
+   *Open `http://127.0.0.1:5000/` in your browser to interact with the model via the modern UI.*
+
+4. **(Optional) Explore the ML Model Notebook:**
    ```bash
    jupyter notebook Phishing_emails_detection_model.ipynb
    ```
 
-4. **Run the cells incrementally** to see the data processing, word cloud generation, model training, and metrics unfold.
-
 ##  Key Takeaways 
-- **End-to-End Pipeline:** Demonstrated a full ML lifecycle—from raw CSV data ingestion to model serialization.
+- **End-to-End Pipeline & Deployment:** Demonstrated a full lifecycle—from raw CSV data ingestion and NLP processing to model serialization and live deployment via a Flask Web App.
+- **Modern UI/UX Implementation:** Built an intuitive, dynamic interface with Tailwind CSS that elegantly communicates predictions to end-users.
 - **NLP Proficiency:** Effectively applied tokenization, stemming, and vectorization to unstructured string/URL data.
 - **Data Science Foundations:** Handled train-test splitting and robust evaluation of model performance using standard validation metrics (Confusion Matrix, Precision, Recall).
